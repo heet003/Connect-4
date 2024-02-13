@@ -1,0 +1,225 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(38deg, #91e4e1, #c637ff, #4cff99, #f0df82, #636363);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: AnimationName 40s ease infinite;
+    -moz-animation: AnimationName 40s ease infinite;
+    -o-animation: AnimationName 40s ease infinite;
+    animation: AnimationName 40s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 97% 0%
+    }
+
+    50% {
+        background-position: 4% 100%
+    }
+
+    100% {
+        background-position: 97% 0%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 97% 0%
+    }
+
+    50% {
+        background-position: 4% 100%
+    }
+
+    100% {
+        background-position: 97% 0%
+    }
+}
+
+@-o-keyframes AnimationName {
+    0% {
+        background-position: 97% 0%
+    }
+
+    50% {
+        background-position: 4% 100%
+    }
+
+    100% {
+        background-position: 97% 0%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 97% 0%
+    }
+
+    50% {
+        background-position: 4% 100%
+    }
+
+    100% {
+        background-position: 97% 0%
+    }
+}
+
+h1 {
+    font-family: cursive;
+}
+
+.header-box {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: 'Sixtyfour', sans-serif;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.win-cell {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 3px dashed rgb(5, 5, 5);
+}
+
+.cell:hover {
+    background-color: #61dafb;
+    color: #282c34;
+}
+
+
+#turn {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'Protest Riot', sans-serif;
+}
+
+.token1,
+.token2 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation: fall 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    position: absolute;
+}
+
+.token1 {
+    background-color: red;
+}
+
+.token2 {
+    background-color: rgb(255, 255, 2);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-600%);
+    }
+
+    10% {
+        transform: translateY(-500%);
+    }
+
+    20% {
+        transform: translateY(-400%);
+    }
+
+    30% {
+        transform: translateY(-300%);
+    }
+
+    40% {
+        transform: translateY(-200%);
+    }
+
+    50% {
+        transform: translateY(-100%);
+    }
+
+    60% {
+        transform: translateY(-50%);
+    }
+
+    70% {
+        transform: translateY(-40%);
+    }
+
+    80% {
+        transform: translateY(-30%);
+    }
+
+    90% {
+        transform: translateY(-30%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#celebration {
+    position: absolute;
+    top: 60%;
+    right: 80%;
+}
+
+#celebration img {
+    width: 100%;
+}
+
+@media screen and (max-width: 731px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #celebration {
+        position: absolute;
+        top: 70%;
+        right: 50%;
+    }
+
+    #celebration img {
+        width: 110%;
+    }
+
+    .header-box {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .cell,
+    .win-cell,
+    .token1,
+    .token2 {
+        width: 40px;
+        height: 40px;
+    }
+}
